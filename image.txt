@@ -20,7 +20,7 @@ to use spark, the files you need are in /usr/local/spark/bin
 
 python is installed as well as pip3 and mlflow
 
-airflow can used by running the command : airflow webserver ==> accessible on port 8080 and username: airflow , password : airflow
+airflow can used by running the command : airflow webserver ( or sudo -u elk_user airflow webserver in case can't run as root error) ==> accessible on port 8080 and username: airflow , password : airflow
 yet it still needs some configurations, ila hin lihtiyaj.
 
 
