@@ -9,16 +9,17 @@ docker start hadoop-master-ALL hadoop-slave1 hadoop-slave2
 par defaut : docker exec -it hadoop-master-ALL bash  ==> /root
 but everything is in : /usr/local
 
+to run Hadoop, use tp d alami
+to use spark, the files you need are in /usr/local/spark/bin
+to run kafka, the files you need are in /usr/local/kafka (/config pour les configurations et /bin pour les scripts)
+
 to run elastic and kibana use : 
 
 sudo -u elk_user ./usr/local/elasticsearch/bin/elasticsearch
 # wait for elastic and then
 sudo -u elk_user ./usr/local/elasticsearch/bin/kibana
 
-to run Hadoop, use tp d alami
-to use spark, the files you need are in /usr/local/spark/bin
-
-python is installed as well as pip3 and mlflow
+python and pip3 are installed as well as mlflow
 
 airflow can used by running the command : airflow webserver ( or sudo -u elk_user airflow webserver in case can't run as root error) ==> accessible on port 8080 and username: airflow , password : airflow
 yet it still needs some configurations, ila hin lihtiyaj.
