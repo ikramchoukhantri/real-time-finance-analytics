@@ -1,0 +1,26 @@
+docker pull aminbenali/bigdata:VCF
+
+
+docker run -itd -v ~/Documents/hadoop_project/:/shared_volume --net=hadoop -p 9870:9870 -p 8088:8088 -p 7077:7077 -p 19888:19888 -p 8080:8080 -p 9200:9200 -p 5601:5601 -p 5000:5000 --name hadoop-master-ALL --hostname hadoop-master aminbenali/bigdata:VCF
+
+#we are using the same slaves dyal l3alami	
+docker start hadoop-master-ALL hadoop-slave1 hadoop-slave2
+
+par defaut : docker exec -it hadoop-master-ALL bash  ==> /root
+but everything is in : /usr/local
+
+to run elastic and kibana use : 
+
+sudo -u elk_user ./usr/local/elasticsearch/bin/elasticsearch
+# wait for elastic and then
+sudo -u elk_user ./usr/local/elasticsearch/bin/kibana
+
+to run Hadoop, use tp d alami
+to use spark, the files you need are in /usr/local/spark/bin
+
+python is installed as well as pip3 and mlflow
+
+airflow can used by running the command : airflow webserver ==> accessible on port 8080 and username: airflow , password : airflow
+yet it still needs some configurations, ila hin lihtiyaj.
+
+
